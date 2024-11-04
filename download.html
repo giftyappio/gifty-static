@@ -7,17 +7,22 @@
     <script>
         window.onload = function() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
+            
+            var iosAppWebLink = "https://apps.apple.com/us/app/id1667170772"
+            var iosAppStoreLink = "itms-apps://apps.apple.com/app/id1667170772"
+            var androidWebLink = "https://play.google.com/store/apps/details?id=com.giftyapp.gifty"
+            var giftyWebsite = "https://giftyapp.io"
+            
             // Redirect to the App Store if the device is iOS
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.replace("https://apps.apple.com/us/app/id1667170772");
+                window.location.replace(iosAppStoreLink);
             }
             // Redirect to Google Play if the device is Android
             else if (/android/i.test(userAgent)) {
-                window.location.replace("https://play.google.com/store/apps/details?id=com.giftyapp.gifty");
+                window.location.replace(androidWebLink);
             } else {
                 // For non-mobile devices, redirect to gifty website
-                window.location.replace("https://giftyapp.io"); 
+                window.location.replace(giftyWebsite); 
             }
         };
     </script>
