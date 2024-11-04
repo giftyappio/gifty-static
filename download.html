@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Our App</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Redirect to App Store if the device is iOS
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/us/app/id1667170772";
+            }
+            // Redirect to Google Play if the device is Android
+            else if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.giftyapp.gifty";
+            }
+            // Display a fallback message for non-mobile users
+            else {
+                document.getElementById("downloadMessage").innerText = "Please open this link on an iOS or Android device.";
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1 id="downloadMessage">Redirecting...</h1>
+</body>
+</html>
