@@ -16,9 +16,9 @@
             else if (/android/i.test(userAgent)) {
                 window.location.href = "https://play.google.com/store/apps/details?id=com.giftyapp.gifty";
             }
-            // Display a fallback message for non-mobile users
+            // Redirect to gifty website
             else {
-                document.getElementById("downloadMessage").innerText = "Please open this link on an iOS or Android device.";
+                window.location.href = "https://giftyapp.io";
             }
         };
     </script>
