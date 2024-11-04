@@ -12,6 +12,10 @@
             var iosAppStoreLink = "itms-apps://apps.apple.com/app/id1667170772"
             var androidWebLink = "https://play.google.com/store/apps/details?id=com.giftyapp.gifty"
             var giftyWebsite = "https://giftyapp.io"
+
+            setTimeout(function() {
+                window.location.href = "https://giftyapp.io";
+            }, 1500);
             
             // Redirect to the App Store if the device is iOS
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
