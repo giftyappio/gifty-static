@@ -19,7 +19,7 @@
             
             // Redirect to the App Store if the device is iOS
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.replace(iosAppStoreLink);
+                window.location.replace(iosAppWebLink);
             }
             // Redirect to Google Play if the device is Android
             else if (/android/i.test(userAgent)) {
